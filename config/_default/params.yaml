@@ -20,7 +20,7 @@ posts:
 # logo: false # Disable Logo
 brand: "ChongMing's Blog"
 
-palette: red # Default palette. Optional. You'll need to clear the browser cache after modifying this.
+palette: blue # Default palette. Optional. You'll need to clear the browser cache after modifying this.
 # Available palettes. Default to ALL. Empty array means disable.
 # palettes:
 #  - blue
