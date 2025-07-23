@@ -1,0 +1,12 @@
+en:
+  languageName: English
+  weight: 1
+
+zh-hans:
+  languageName: 简体中文
+  weight: 4
+  params:
+    description: 重明酸钾的博客
+    keywords: '博客,技术,编程,计算机'
+    archive:
+      dateFormat: 01-02
