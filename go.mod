@@ -1,4 +1,4 @@
-module github.com/chongmingsuanjia521/Wus_Blog.github.io
+module github.com/chongmingsuanjia521/chongmingsuanjia521.github.io
 
 go 1.18
 
