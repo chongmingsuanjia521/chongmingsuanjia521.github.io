@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://chongmingsuanjia521.github.io/sitemap.xml
