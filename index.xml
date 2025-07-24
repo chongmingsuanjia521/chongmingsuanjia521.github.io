@@ -1,1 +1,151 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>“重明酸钾的博客”</title><link>https://chongmingsuanjia521.github.io/</link><description>Recent content on “重明酸钾的博客”</description><generator>Hugo</generator><language>zh-hans</language><copyright>Copyright © 2025-2025 Chongmingsuanjia ALL RIGHTS RESERVED</copyright><lastBuildDate>Thu, 24 Jul 2025 11:43:12 +0800</lastBuildDate><atom:link href="https://chongmingsuanjia521.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Git常用命令</title><link>https://chongmingsuanjia521.github.io/blog/2025/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link><pubDate>Thu, 24 Jul 2025 11:43:12 +0800</pubDate><guid>https://chongmingsuanjia521.github.io/blog/2025/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid><description>&lt;p>Summary.&lt;/p></description></item><item><title>Index.zh Cn</title><link>https://chongmingsuanjia521.github.io/posts/new-post/index.zh-cn/</link><pubDate>Tue, 22 Jul 2025 22:56:07 +0800</pubDate><guid>https://chongmingsuanjia521.github.io/posts/new-post/index.zh-cn/</guid><description>&lt;p>Summary.&lt;/p></description></item><item><title>README</title><link>https://chongmingsuanjia521.github.io/blog/2022/04/readme/</link><pubDate>Sun, 17 Apr 2022 16:35:29 +0800</pubDate><guid>https://chongmingsuanjia521.github.io/blog/2022/04/readme/</guid><description><![CDATA[<p>See also <a href="https://github.com/razonyang/hugo-theme-bootstrap-skeleton/blob/main/README.md" target="_blank" rel="noopener noreferrer">README.md<i class="fas fa-external-link-square-alt ms-1"></i></a>.</p>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>“重明酸钾的博客”</title><link>https://chongmingsuanjia521.github.io/</link><description>Recent content on “重明酸钾的博客”</description><generator>Hugo</generator><language>zh-hans</language><copyright>Copyright © 2025-2025 Chongmingsuanjia ALL RIGHTS RESERVED</copyright><lastBuildDate>Thu, 24 Jul 2025 20:34:02 +0800</lastBuildDate><atom:link href="https://chongmingsuanjia521.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Git笔记</title><link>https://chongmingsuanjia521.github.io/notes/git%E7%AC%94%E8%AE%B0.zh-cn/</link><pubDate>Thu, 24 Jul 2025 20:34:02 +0800</pubDate><guid>https://chongmingsuanjia521.github.io/notes/git%E7%AC%94%E8%AE%B0.zh-cn/</guid><description>&lt;p>这是一篇笔记&lt;/p></description></item><item><title>Git常用命令</title><link>https://chongmingsuanjia521.github.io/posts/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/gitcommands.zh-cn/</link><pubDate>Thu, 24 Jul 2025 20:21:17 +0800</pubDate><guid>https://chongmingsuanjia521.github.io/posts/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/gitcommands.zh-cn/</guid><description><![CDATA[<h1 id="git-常用命令" data-numberify>Git 常用命令<a class="anchor ms-1" href="#git-常用命令"></a></h1>
+
+<h2 id="1-配置命令" data-numberify>1. 配置命令<a class="anchor ms-1" href="#1-配置命令"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># 设置全局用户名和邮箱</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">git config --global user.name <span class="s2">&#34;你的用户名&#34;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">git config --global user.email <span class="s2">&#34;你的邮箱&#34;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"># 查看配置信息</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">git config --list
+</span></span></code></pre></div>
+<h2 id="2-初始化和基本操作" data-numberify>2. 初始化和基本操作<a class="anchor ms-1" href="#2-初始化和基本操作"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># 初始化仓库</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">git init
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c1"># 克隆远程仓库</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">git clone &lt;repository-url&gt;
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c1"># 添加文件到暂存区</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">git add &lt;file-name&gt;    <span class="c1"># 添加指定文件</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">git add .              <span class="c1"># 添加所有文件</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1"># 提交更改</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">git commit -m <span class="s2">&#34;提交说明&#34;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">git commit -am <span class="s2">&#34;提交说明&#34;</span>  <span class="c1"># 合并 add 和 commit</span>
+</span></span></code></pre></div>
+<h2 id="3-分支操作" data-numberify>3. 分支操作<a class="anchor ms-1" href="#3-分支操作"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># 查看分支</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">git branch          <span class="c1"># 查看本地分支</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">git branch -r       <span class="c1"># 查看远程分支</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">git branch -a       <span class="c1"># 查看所有分支</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="c1"># 创建分支</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">git branch &lt;branch-name&gt;
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="c1"># 切换分支</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">git checkout &lt;branch-name&gt;
+</span></span><span class="line"><span class="ln">11</span><span class="cl">git switch &lt;branch-name&gt;    <span class="c1"># Git 2.23+ 新命令</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="c1"># 创建并切换分支</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">git checkout -b &lt;branch-name&gt;
+</span></span><span class="line"><span class="ln">15</span><span class="cl">git switch -c &lt;branch-name&gt;
+</span></span><span class="line"><span class="ln">16</span><span class="cl">
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="c1"># 删除分支</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">git branch -d &lt;branch-name&gt;    <span class="c1"># 删除本地分支</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">git branch -D &lt;branch-name&gt;    <span class="c1"># 强制删除本地分支</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">git push origin --delete &lt;branch-name&gt;  <span class="c1"># 删除远程分支</span>
+</span></span></code></pre></div>
+<h2 id="4-远程仓库操作" data-numberify>4. 远程仓库操作<a class="anchor ms-1" href="#4-远程仓库操作"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># 添加远程仓库</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">git remote add origin &lt;repository-url&gt;
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c1"># 查看远程仓库</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">git remote -v
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c1"># 推送到远程</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">git push origin &lt;branch-name&gt;
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">git push -u origin &lt;branch-name&gt;  <span class="c1"># 首次推送并设置上游分支</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1"># 拉取更新</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">git pull origin &lt;branch-name&gt;
+</span></span><span class="line"><span class="ln">13</span><span class="cl">git fetch origin              <span class="c1"># 获取远程更新但不合并</span>
+</span></span></code></pre></div>
+<h2 id="5-状态和差异查看" data-numberify>5. 状态和差异查看<a class="anchor ms-1" href="#5-状态和差异查看"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># 查看状态</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">git status
+</span></span><span class="line"><span class="ln">3</span><span class="cl">
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"># 查看差异</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">git diff              <span class="c1"># 工作区与暂存区的差异</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">git diff --staged     <span class="c1"># 暂存区与最后一次提交的差异</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">git diff &lt;commit1&gt; &lt;commit2&gt;  <span class="c1"># 两个提交之间的差异</span>
+</span></span></code></pre></div>
+<h2 id="6-历史记录" data-numberify>6. 历史记录<a class="anchor ms-1" href="#6-历史记录"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># 查看提交历史</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">git log
+</span></span><span class="line"><span class="ln">3</span><span class="cl">git log --oneline    <span class="c1"># 简洁模式</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">git log --graph      <span class="c1"># 图形模式显示</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">git reflog          <span class="c1"># 查看操作历史</span>
+</span></span></code></pre></div>
+<h2 id="7-撤销和重置" data-numberify>7. 撤销和重置<a class="anchor ms-1" href="#7-撤销和重置"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># 撤销工作区修改</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">git checkout -- &lt;file-name&gt;
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">git restore &lt;file-name&gt;    <span class="c1"># Git 2.23+ 新命令</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># 取消暂存</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">git reset HEAD &lt;file-name&gt;
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">git restore --staged &lt;file-name&gt;
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="c1"># 重置到指定提交</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">git reset --soft &lt;commit&gt;    <span class="c1"># 保留工作区和暂存区修改</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">git reset --mixed &lt;commit&gt;   <span class="c1"># 保留工作区修改（默认）</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">git reset --hard &lt;commit&gt;    <span class="c1"># 清除所有修改</span>
+</span></span></code></pre></div>
+<h2 id="8-暂存和合并" data-numberify>8. 暂存和合并<a class="anchor ms-1" href="#8-暂存和合并"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># 暂存当前修改</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">git stash
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">git stash save <span class="s2">&#34;说明文字&#34;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># 查看暂存列表</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">git stash list
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="c1"># 应用暂存</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">git stash apply    <span class="c1"># 应用最近的暂存（不删除暂存记录）</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">git stash pop      <span class="c1"># 应用最近的暂存（删除暂存记录）</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="c1"># 合并分支</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">git merge &lt;branch-name&gt;
+</span></span><span class="line"><span class="ln">14</span><span class="cl">git rebase &lt;branch-name&gt;    <span class="c1"># 变基</span>
+</span></span></code></pre></div>
+<h2 id="9-标签管理" data-numberify>9. 标签管理<a class="anchor ms-1" href="#9-标签管理"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># 创建标签</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">git tag &lt;tag-name&gt;
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">git tag -a &lt;tag-name&gt; -m <span class="s2">&#34;说明文字&#34;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># 查看标签</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">git tag
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">git show &lt;tag-name&gt;
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="c1"># 推送标签</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">git push origin &lt;tag-name&gt;
+</span></span><span class="line"><span class="ln">11</span><span class="cl">git push origin --tags    <span class="c1"># 推送所有标签</span>
+</span></span></code></pre></div>
+<h2 id="10-高级技巧" data-numberify>10. 高级技巧<a class="anchor ms-1" href="#10-高级技巧"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># 清理仓库</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">git clean -f    <span class="c1"># 删除未跟踪文件</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">git clean -fd   <span class="c1"># 删除未跟踪文件和目录</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># 修改最后一次提交</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">git commit --amend
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="c1"># 查找内容</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">git grep <span class="s2">&#34;查找的内容&#34;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1"># 锁定文件</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">git update-index --assume-unchanged &lt;file&gt;
+</span></span><span class="line"><span class="ln">13</span><span class="cl">git update-index --no-assume-unchanged &lt;file&gt;
+</span></span></code></pre></div>
+<h2 id="最佳实践建议" data-numberify>最佳实践建议<a class="anchor ms-1" href="#最佳实践建议"></a></h2>
+<ol>
+<li>经常性地提交代码，保持提交粒度适中</li>
+<li>编写清晰的提交信息</li>
+<li>定期从远程仓库拉取更新</li>
+<li>使用分支进行功能开发</li>
+<li>及时处理合并冲突</li>
+<li>慎用 <code>git reset --hard</code> 命令</li>
+<li>重要操作前先创建备份分支</li>
+</ol>
+
+<h2 id="常见问题解决" data-numberify>常见问题解决<a class="anchor ms-1" href="#常见问题解决"></a></h2>
+<ol>
+<li>
+<p>提交到错误分支：</p>]]></description><enclosure url="https://chongmingsuanjia521.github.io/images/ArticlesCover/git.png" length="72620" type="image/.png"/></item><item><title>Git常用命令</title><link>https://chongmingsuanjia521.github.io/blog/2025/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link><pubDate>Thu, 24 Jul 2025 11:43:12 +0800</pubDate><guid>https://chongmingsuanjia521.github.io/blog/2025/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid><description>&lt;p>Summary.&lt;/p></description></item><item><title>README</title><link>https://chongmingsuanjia521.github.io/blog/2022/04/readme/</link><pubDate>Sun, 17 Apr 2022 16:35:29 +0800</pubDate><guid>https://chongmingsuanjia521.github.io/blog/2022/04/readme/</guid><description><![CDATA[<p>See also <a href="https://github.com/razonyang/hugo-theme-bootstrap-skeleton/blob/main/README.md" target="_blank" rel="noopener noreferrer">README.md<i class="fas fa-external-link-square-alt ms-1"></i></a>.</p>]]></description></item></channel></rss>
