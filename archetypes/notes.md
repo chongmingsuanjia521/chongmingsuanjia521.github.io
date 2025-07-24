@@ -1,6 +1,6 @@
 ---
-# type: docs 
 title: {{ replace .Name "-" " " | title }}
+type: docs
 date: {{ .Date }}
 featured: false
 draft: false
@@ -14,9 +14,3 @@ categories: []
 tags: []
 images: []
 ---
-
-Summary.
-
-<!--more-->
-
-Content.

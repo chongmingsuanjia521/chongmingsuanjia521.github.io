@@ -4,7 +4,8 @@ mainSections:
   - blog
   - posts
   - news
-
+  - notes
+  
 # titleSeparator: '|' # Title separator. Default to -.
 
 description: 技术分享与学习笔记
@@ -86,7 +87,7 @@ titleCase: true # Capitalized title.
 viewer: true # Image Viewer
 
 # backgroundImage: ['/images/bg-light.png', '/images/bg-dark.png']
-rss: home # link the RSS button to homepage all the times.
+# rss: home # link the RSS button to homepage all the times.
 
 sidebar:
   fixed: true
@@ -337,4 +338,4 @@ author:
     # twitter: razonyang
     # patreon: razonyang
     # paypal: razonyang
-    # rss: "" # Remove RSS
+    rss: "" # Remove RSS

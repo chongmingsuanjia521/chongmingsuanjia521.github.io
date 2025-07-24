@@ -52,9 +52,3 @@ markup:
     lineNos: true
     noClasses: false
     lineNumbersInTable: false
-# 输出配置
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
