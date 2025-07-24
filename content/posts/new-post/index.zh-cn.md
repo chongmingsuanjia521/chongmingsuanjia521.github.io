@@ -10,8 +10,8 @@ reward: true
 pinned: false
 carousel: false
 series:
-categories: []
-tags: []
+categories: [Git]
+tags: [Git]
 images: []
 ---
 
