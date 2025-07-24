@@ -1,48 +1,66 @@
-name: GitHub Pages
+name: Deploy Hugo site to Pages
+
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 的权限
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+# 允许一次部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# 默认设置
+defaults:
+  run:
+    shell: bash
+
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }}
+  build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.115.4
     steps:
-      - name: Checkout 🛎️
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Checkout
         uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
           fetch-depth: 0
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          node-version: '16'
+          path: ./public
 
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-            
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build
-        run: hugo --minify --gc --enableGitInfo
-
-      - name: Deploy 🚀
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          force_orphan: true # 这会确保 gh-pages 分支只保留最新的提交
