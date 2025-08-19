@@ -1,5 +1,5 @@
 ---
-title: SpringCache.zh Cn
+title: SpringCache笔记
 type: docs
 date: 2025-08-14T10:52:55+08:00
 featured: false
